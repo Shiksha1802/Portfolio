@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="script.js">
+  <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-
   <header>
     <nav>
       <h1>My Portfolio</h1>
       <ul id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="Shiksha Rawat.pdf" target="_blank">Resume</a></li>
+        <li><a class="sty" ="#home">Home</a></li>
+        <li><a class="sty" ="#projects">Projects</a></li>
+        <li><a class="sty" ="#contact">Contact</a></li>
+        <li><a class="sty" ="Shiksha Rawat.pdf" target="_blank">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -27,11 +26,12 @@
     <div class="intro">
       <img src="img/me.jpg" alt="Shiksha Rawat" class="profile-pic" />
       <h2>Hello, I'm <span class="highlight">Shiksha Rawat</span></h2>
-      <p>A motivated Computer Science student with hands-on experience in front-end and back-end web development,
-      including HTML, CSS, Java, and MySQL. Skilled in web design and building dynamic, responsive websites.
-      I'm a passionate Web Developer specializing in HTML, CSS, and JavaScript.
+      <p>
+        A motivated Computer Science student with hands-on experience in front-end and back-end web development,
+        including HTML, CSS, Java, and MySQL. Skilled in web design and building dynamic, responsive websites.
+        I'm a passionate Web Developer specializing in HTML, CSS, and JavaScript.
       </p>
-<!--       <button onclick="scrollToSection('projects')">View My Work</button> -->
+      <button onclick="scrollToSection('projects')">View My Work</button>
     </div>
   </section>
 
@@ -40,9 +40,8 @@
     <div class="project-container">
       <div class="project-card">
         <h3>
-          Cafe Management System
-          <a href=" https://cafe-management-1802.netlify.app/" target="_blank" style="color: black; font-weight: 200; font-style: italic;">Project</a>
-      
+          Cafe Management System 
+          <a class="sty2" href="https://cafe-management-1802.netlify.app/" target="_blank">[View]</a>
         </h3>
         <p>
           A web-based system designed to streamline daily cafe operations including order management, menu updates, billing, and inventory tracking. Built using HTML, CSS, JavaScript, and optionally MySQL for backend.
@@ -61,11 +60,10 @@
   <section id="contact">
     <h2><i class="fas fa-envelope"></i> Contact Me</h2>
     <div class="contact-links">
-<!--       <p>
+      <p>
         <i class="fas fa-envelope"></i>
-      <a href="mailto:your.shiksharawat1802@gmail.com">Shiksha_Email</a>
-
-      </p> -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shiksharawat1802@gmail.com" target="_blank">Email Me</a>
+      </p>
       <p>
         <i class="fab fa-whatsapp"></i>
         <a href="https://wa.me/919926932907" target="_blank">Chat on WhatsApp</a>
@@ -76,7 +74,5 @@
   <footer>
     <p>© 2025 Shiksha Rawat. All rights reserved.</p>
   </footer>
-
- 
 </body>
 </html>
