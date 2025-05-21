@@ -110,3 +110,17 @@ footer {
   background: #222;
   color:rgb(255, 225, 189);
 }
+.contact-links {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #030609;
+}
+
+.contact-links i {
+  margin-right: 8px;
+  color: rgb(252, 205, 144);
+}
