@@ -1,10 +1,9 @@
-/* .sty{
+.sty{
   border: 2px solid bisque;
   border-radius: 20px;
   padding: 8px;
   font-style: italic;
-  margin: 20px;
-} */
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -51,7 +50,6 @@ nav a {
   color: bisque;
   text-decoration: none;
   font-weight: bold;
-  margin:20px;
 }
 
 section {
@@ -148,22 +146,44 @@ footer {
   margin-right: 8px;
   color: rgb(252, 205, 144);
 }
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: bisque;
+}
 
+/* Mobile View */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 1rem;
   }
 
   #nav-links {
+    display: none;
     flex-direction: column;
+    width: 100%;
+  }
+
+  #nav-links.active {
+    display: flex;
   }
 
   #nav-links li {
     margin: 10px 0;
+    text-align: center;
+    width: 100%;
   }
 
-  .project-container {
-    grid-template-columns: 1fr;
+  nav a {
+    display: block;
+    width: 100%;
   }
 }
