@@ -1,0 +1,204 @@
+/* Base and reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:#333 ;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flex layout to keep footer at bottom */
+body > header,
+body > footer {
+  flex-shrink: 0;
+}
+
+body > section {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+header {
+  background: #333;
+  color: bisque;
+  padding: 1rem;
+  
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: bisque;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #555;
+  border: 2px solid bisque;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav a:hover{
+  background-color: bisque;
+  color: #030609;
+    box-shadow: 4px 2px 3px 2px grey;
+    border: 2px solid black;
+}
+
+/* Section heading */
+#projects h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: beige;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+/* Projects container grid */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Project card styling */
+.project-card {
+  background: rgb(254, 234, 210);
+  padding: 1.8rem 1.6rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Project title with View link */
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card h3 a.sty2 {
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1.8px solid #010100;
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card h3 a.sty2:hover {
+  background-color: rgb(250, 214, 171);
+  color:black;
+}
+
+/* Project description */
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  font-weight: 500;
+  margin: 0;
+}
+
+.foot{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
+
+}
+footer{
+  color: antiquewhite;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body > section {
+    padding: 2rem 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: bisque;
+}
+@media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu-icon {
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+      }
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      #nav-links.active {
+        display: flex;
+      }
+      #nav-links li {
+        margin: 10px 0px;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+      }
+      nav a {
+        display: block;
+        background-color: grey;
+        color: whitesmoke;
+        border: 3px solid black;
+        border-radius: 50px ; 
+       
+      }
+      
+    }

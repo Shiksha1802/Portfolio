@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My Portfolio</title>
+  <link rel="stylesheet" href="contact_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+   <header>
+    <nav>
+      <h1>My Portfolio</h1>
+     <!-- navbar -->
+      <div id="menu-toggle" class="menu-icon">&#9776;</div>
+      <ul id="nav-links">
+        <li><a class="sty" href="index.html">Home</a></li>
+        <li><a class="sty" href="about.html">About</a></li>
+        <li><a class="sty" href="projects.html">Projects</a></li>
+        <li><a class="sty" href="contact.html">Contact</a></li>
+        <li><a class="sty" href="Shiksha Rawat.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="contact">
+    <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+    <form class="contact-form" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Shiksha Rawat. All rights reserved.</p>
+  </footer>
+<script>
+  function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !subject || !message) {
+        alert('Please fill out all fields.');
+        return false;
+      }
+      alert('Message sent successfully!');
+      return true;
+    } 
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - My Portfolio</title>
+  <link rel="stylesheet" href="project_style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pO9Q+Xvmkz5JWmtJ++IvEf73yPq2FXjhCZbq7Qp4b3XcV1chxRq0yP4PSk5nElA2X5S/4vJZB9v6gGHe4WbBZA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+     <header>
+    <nav>
+      <h1>My Portfolio</h1>
+     <!-- navbar -->
+      <div id="menu-toggle" class="menu-icon">&#9776;</div>
+      <ul id="nav-links">
+        <li><a class="sty" href="index.html">Home</a></li>
+        <li><a class="sty" href="about.html">About</a></li>
+        <li><a class="sty" href="projects.html">Projects</a></li>
+        <li><a class="sty" href="contact.html">Contact</a></li>
+        <li><a class="sty" href="Shiksha Rawat.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>
+          Cafe Management System
+          <a class="sty2" href="https://cafe-management-1802.netlify.app/" target="_blank">[View]</a>
+        </h3>
+        <p>
+          A system for managing cafe orders, menu updates, billing, and inventory. Built with HTML, CSS, JavaScript, and MySQL.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>E-Healthcare System</h3>
+        <p>
+          A platform for online doctor appointments, prescriptions, and consultations. Built with HTML, CSS, JS, and Java backend.
+        </p>
+      </div>
+       <div class="project-card">
+        <h3>Online - Book Store</h3>
+        <p>
+          A platform for selling and Buying Books using HTML, CSS and JavaScript as front-end Language and JAVA as Back-end language. </p>
+      </div>
+       <div class="project-card">
+        <h3>E-Commerce Website</h3>
+        <p>
+         ---
+        </p>
+      </div>
+       <div class="project-card">
+        <h3>Library management-System</h3>
+        <p>
+          A platform to manage and read books online with the feature of selling books online</p>
+      </div> <div class="project-card">
+        <h3>Body-Mass Index Calculator</h3>
+        <p>
+         A online calculator to Find BMI of a person. </p>
+      </div>
+       <div class="project-card">
+        <h3>Calculator</h3>
+        <p>
+          A Basic Calculator which perform operation like +, *, /, - and many more.
+        </p>
+      </div>
+    </div>
+    
+  </section>
+<div class="foot">
+  <footer>
+    <p>© 2025 Shiksha Rawat. All rights reserved.</p>
+  </footer>
+
+</div>
+  <script >document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  console.log("Script loaded. Toggle and navLinks:", toggle, navLinks);
+ 
+  toggle.addEventListener("click", () => {
+    console.log("Menu toggle clicked");
+    navLinks.classList.toggle("active");
+  });
+});</script>
+</body>
+</html>
