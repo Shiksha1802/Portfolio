@@ -2,32 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
   <header>
     <nav>
       <h1>My Portfolio</h1>
-
-      <!-- Hamburger Menu Icon -->
-      <div id="menu-toggle" class="menu-icon">
-        <i class="fas fa-bars"></i>
-      </div>
-
+     <!-- navbar -->
+      <div id="menu-toggle" class="menu-icon">&#9776;</div>
       <ul id="nav-links">
-        <li><a class="sty" href="#home">Home</a></li>
-        <li><a class="sty" href="#projects">Projects</a></li>
-        <li><a class="sty" href="#contact">Contact</a></li>
+        <li><a class="sty" href="index.html">Home</a></li>
+        <li><a class="sty" href="about.html">About</a></li>
+        <li><a class="sty" href="projects.html">Projects</a></li>
+        <li><a class="sty" href="contact.html">Contact</a></li>
         <li><a class="sty" href="Shiksha Rawat.pdf" target="_blank">Resume</a></li>
       </ul>
     </nav>
   </header>
-
+<!-- Content of home page -->
   <section id="home">
     <div class="intro">
       <img src="img/Shiksha_Rawat.jpg" alt="Shiksha Rawat" class="profile-pic" />
@@ -37,48 +31,26 @@
         including HTML, CSS, Java, and MySQL. Skilled in web design and building dynamic, responsive websites.
         I'm a passionate Web Developer specializing in HTML, CSS, and JavaScript.
       </p>
-      <button onclick="scrollToSection('projects')">View My Work</button>
+      <button onclick="window.location.href='projects.html'">View My Work</button>
     </div>
   </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <h3>
-          Cafe Management System 
-          <a class="sty2" href="https://cafe-management-1802.netlify.app/" target="_blank">[View]</a>
-        </h3>
-        <p>
-          A web-based system designed to streamline daily cafe operations including order management, menu updates, billing, and inventory tracking. Built using HTML, CSS, JavaScript, and optionally MySQL for backend.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>E-Healthcare System</h3>
-        <p>
-          An online platform that allows patients to book appointments, view prescriptions, and consult doctors virtually. Developed with frontend technologies (HTML, CSS, JS) and backend using Java for secure medical data management.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-    <div class="contact-links">
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shiksharawat1802@gmail.com" target="_blank">Email Me</a>
-      </p>
-      <p>
-        <i class="fab fa-whatsapp"></i>
-        <a href="https://wa.me/919926932907" target="_blank">Chat on WhatsApp</a>
-      </p>
-    </div>
-  </section>
-
+<!-- copyright -->
   <footer>
     <p>© 2025 Shiksha Rawat. All rights reserved.</p>
   </footer>
+<!-- javascript for icon  -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      console.log("Script loaded. Toggle and navLinks:", toggle, navLinks);
+
+      toggle.addEventListener("click", () => {
+        console.log("Menu toggle clicked");
+        navLinks.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
