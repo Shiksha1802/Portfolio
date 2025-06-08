@@ -38,6 +38,18 @@
   <footer>
     <p>© 2025 Shiksha Rawat. All rights reserved.</p>
   </footer>
- <script src="script.js"></script>
+ <script >
+   document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  console.log("Script loaded. Toggle and navLinks:", toggle, navLinks);
+ 
+  toggle.addEventListener("click", () => {
+    console.log("Menu toggle clicked");
+    navLinks.classList.toggle("active");
+  });
+});
+ </script>
 </body>
 </html>
