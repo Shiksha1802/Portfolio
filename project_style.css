@@ -160,6 +160,12 @@ footer{
     font-size: 1.3rem;
   }
 }
+ .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
 
 .menu-icon {
@@ -178,6 +184,13 @@ footer{
         align-self: flex-end;
         margin-bottom: 1rem;
       }
+   .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
       #nav-links {
         display: none;
         flex-direction: column;
