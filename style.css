@@ -99,7 +99,7 @@
       position: relative;
       color: white;
       font-size: 20px;
-      font-weight: 700;
+      
       padding: 4rem 2rem;
       text-align: center;
     }
@@ -127,7 +127,7 @@
       margin-bottom: 1rem;
     }
     .highlight {
-      color: #ffd700;
+      color: bisque ;
     }
     button {
       padding: 0.7rem 1.5rem;
