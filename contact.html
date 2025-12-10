@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - My Portfolio</title>
+
   <link rel="stylesheet" href="contact_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
 </head>
+
 <body>
-   <header>
+
+  <!-- ================= HEADER ================= -->
+  <header>
     <nav>
       <div class="head">
-      <h1>My Portfolio</h1>
-     <!-- navbar -->
-      <div id="menu-toggle" class="menu-icon">&#9776;</div></div>
+        <h1>My Portfolio</h1>
+        <div id="menu-toggle" class="menu-icon">&#9776;</div>
+      </div>
+
       <ul id="nav-links">
         <li><a class="sty" href="index.html">Home</a></li>
         <li><a class="sty" href="about.html">About</a></li>
@@ -24,8 +28,11 @@
       </ul>
     </nav>
   </header>
+
+  <!-- ================= CONTACT SECTION ================= -->
   <section id="contact">
     <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+
     <form class="contact-form" onsubmit="return validateForm()">
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="Your Email" required>
@@ -35,34 +42,37 @@
     </form>
   </section>
 
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2025 Shiksha Rawat. All rights reserved.</p>
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
 
-  console.log("Script loaded. Toggle and navLinks:", toggle, navLinks);
- 
-  toggle.addEventListener("click", () => {
-    console.log("Menu toggle clicked");
-    navLinks.classList.toggle("active");
-  });
-});
-  function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const subject = document.getElementById('subject').value.trim();
-      const message = document.getElementById('message').value.trim();
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    });
+
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+
       if (!name || !email || !subject || !message) {
-        alert('Please fill out all fields.');
+        alert("Please fill out all fields.");
         return false;
       }
-      alert('Message sent successfully!');
+
+      alert("Message sent successfully!");
       return true;
-    } 
-</script>
-  
+    }
+  </script>
+
 </body>
 </html>
