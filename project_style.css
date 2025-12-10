@@ -143,13 +143,14 @@ nav a:hover{
   
 
 }
-footer{
+
+footer {
+  margin-top: auto;   /* ✅ THIS is the key line */
   color: antiquewhite;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
+  
 /* Responsive tweaks */
 @media (max-width: 600px) {
   body > section {
@@ -215,3 +216,4 @@ footer{
       }
       
     }
+
