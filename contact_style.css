@@ -1,22 +1,23 @@
-/* Base reset */
+/* ================= RESET ================= */
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #333;
-  color: beige;              /* ✅ fixed typo */
+  color: beige;
   min-height: 100vh;
 }
 
-/* Layout */
+/* ================= LAYOUT ================= */
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* ================= HEADER / NAV ================= */
+/* ================= HEADER ================= */
 header {
-  color: beige;
+  background: #333;
+  padding: 1rem 2rem;
 }
 
 nav {
@@ -25,9 +26,16 @@ nav {
   align-items: center;
 }
 
-nav ul {
+.head {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
   list-style: none;
+  display: flex;
   padding: 0;
   margin: 0;
 }
@@ -45,29 +53,34 @@ nav a {
 .sty {
   border: 2px solid bisque;
   border-radius: 20px;
-  padding: 8px;
+  padding: 8px 14px;
   font-style: italic;
+  transition: 0.3s;
 }
 
-/* ================= SECTIONS ================= */
+.sty:hover {
+  background-color: bisque;
+  color: #333;
+}
+
+/* ================= SECTION ================= */
 section {
   padding: 4rem 2rem;
-  color: beige;
+  text-align: center;
 }
 
 h2 {
-  text-align: center;
   color: beige;
+  margin-bottom: 2rem;
 }
 
 /* ================= CONTACT FORM ================= */
 .contact-form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   background: rgb(255, 225, 189);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   color: #333;
 }
 
@@ -75,33 +88,32 @@ h2 {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin-bottom: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
 .contact-form button {
-  background-color: #333;
+  background: #333;
   color: bisque;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 .contact-form button:hover {
-  background-color: #444;
+  background: #444;
 }
 
 /* ================= FOOTER ================= */
 footer {
-  text-align: center;
-  padding: 2rem;
   background: #222;
-  color: rgb(255, 225, 189);
+  text-align: center;
+  padding: 1.8rem;
   margin-top: auto;
+  color: rgb(255, 225, 189);
 }
 
 /* ================= MOBILE MENU ================= */
@@ -121,15 +133,7 @@ footer {
 
   .menu-icon {
     display: block;
-    align-self: flex-end;
     margin-bottom: 1rem;
-  }
-
-  .head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
   }
 
   #nav-links {
@@ -143,17 +147,16 @@ footer {
   }
 
   #nav-links li {
-    margin: 10px 0;
     text-align: center;
-    width: 100%;
     padding: 10px;
+    margin: 5px 0;
   }
 
   nav a {
     display: block;
-    background-color: grey;
+    background: grey;
     color: whitesmoke;
-    border: 3px solid black;
-    border-radius: 50px;
+    border-radius: 30px;
+    border: 2px solid black;
   }
 }
